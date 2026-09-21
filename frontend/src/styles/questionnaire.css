@@ -1,0 +1,44 @@
+.questionnaire-page {
+  max-width: 640px;
+  margin: 0 auto;
+  padding: 48px 24px 100px;
+}
+.progress-wrap { margin-bottom: 28px; }
+.progress-label { font-size: 0.85rem; color: var(--color-text-muted); margin-bottom: 6px; }
+.progress-track {
+  height: 8px;
+  background: var(--color-border);
+  border-radius: 6px;
+  overflow: hidden;
+}
+.progress-fill {
+  height: 100%;
+  background: var(--color-primary);
+  border-radius: 6px;
+  transition: width 0.3s ease;
+}
+
+.question-group { display: flex; flex-direction: column; gap: 20px; }
+.question-card {
+  background: var(--color-surface);
+  border-radius: var(--radius-lg);
+  padding: 20px;
+  box-shadow: var(--shadow-sm);
+}
+.question-label { display: block; font-weight: 600; margin-bottom: 14px; }
+.question-binary { display: flex; gap: 10px; }
+.question-slider input[type="range"] { width: 100%; accent-color: var(--color-primary); }
+.question-slider-scale {
+  display: flex;
+  justify-content: space-between;
+  font-size: 0.8rem;
+  color: var(--color-text-muted);
+  margin-top: 4px;
+}
+.question-slider-value { font-weight: 700; color: var(--color-primary); }
+
+.questionnaire-actions {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 28px;
+}

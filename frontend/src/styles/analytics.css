@@ -1,0 +1,41 @@
+.chart-box {
+  background: var(--color-surface);
+  border-radius: var(--radius-lg);
+  padding: 16px;
+  box-shadow: var(--shadow-sm);
+  margin: 12px 0 32px;
+}
+.metrics-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(140px, 1fr));
+  gap: 12px;
+  margin: 16px 0;
+}
+.metric-box {
+  background: var(--color-surface);
+  border-radius: var(--radius-md);
+  padding: 16px;
+  text-align: center;
+  box-shadow: var(--shadow-sm);
+}
+.metric-box span { display: block; font-size: 0.8rem; color: var(--color-text-muted); margin-bottom: 6px; }
+.metric-box strong { font-size: 1.3rem; }
+.confusion-table {
+  border-collapse: collapse;
+  margin-top: 8px;
+}
+.confusion-table td {
+  border: 1px solid var(--color-border);
+  padding: 10px 16px;
+  text-align: center;
+  background: var(--color-surface);
+}
+.metric-caption { font-size: 0.85rem; margin-top: 8px; }
+.arch-block {
+  background: #10162b;
+  color: #cfe0ff;
+  padding: 16px;
+  border-radius: var(--radius-md);
+  font-size: 0.85rem;
+  overflow-x: auto;
+}

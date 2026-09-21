@@ -1,0 +1,90 @@
+.hero {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 72px 24px 48px;
+  display: grid;
+  grid-template-columns: 1.2fr 0.8fr;
+  gap: 40px;
+  align-items: center;
+}
+.hero-content h1 {
+  font-size: 2.4rem;
+  margin-bottom: 16px;
+  letter-spacing: -0.02em;
+}
+.hero-subtitle {
+  font-size: 1.1rem;
+  max-width: 520px;
+  margin-bottom: 28px;
+}
+.hero-actions { display: flex; gap: 14px; }
+
+.hero-visual {
+  position: relative;
+  height: 280px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.hero-visual-ring {
+  position: absolute;
+  border-radius: 50%;
+  border: 2px solid rgba(77, 107, 254, 0.25);
+  animation: pulse-ring 4s ease-in-out infinite;
+}
+.ring-1 { width: 220px; height: 220px; }
+.ring-2 { width: 300px; height: 300px; animation-delay: 1s; }
+.hero-visual-core {
+  width: 110px;
+  height: 110px;
+  border-radius: 50%;
+  background: linear-gradient(135deg, var(--color-primary), #7b93ff);
+  color: white;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.6rem;
+  font-weight: 700;
+  box-shadow: var(--shadow-md);
+}
+@keyframes pulse-ring {
+  0%, 100% { transform: scale(1); opacity: 0.7; }
+  50% { transform: scale(1.08); opacity: 0.3; }
+}
+
+.features {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 40px 24px 80px;
+}
+.features h2 { text-align: center; margin-bottom: 32px; font-size: 1.8rem; }
+.feature-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 20px;
+}
+.feature-card {
+  background: var(--color-surface);
+  border-radius: var(--radius-lg);
+  padding: 24px;
+  box-shadow: var(--shadow-sm);
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+.feature-card:hover { transform: translateY(-4px); box-shadow: var(--shadow-md); }
+.feature-card h3 { font-size: 1.05rem; margin-bottom: 8px; }
+.feature-card p { font-size: 0.9rem; margin: 0; }
+
+.cta-band {
+  background: linear-gradient(135deg, var(--color-primary), #6c86ff);
+  color: white;
+  text-align: center;
+  padding: 64px 24px;
+}
+.cta-band h2 { font-size: 1.7rem; margin-bottom: 8px; }
+.cta-band p { color: rgba(255,255,255,0.9); margin-bottom: 24px; }
+.cta-band .btn-primary { background: white; color: var(--color-primary-dark); }
+
+@media (max-width: 860px) {
+  .hero { grid-template-columns: 1fr; }
+  .hero-visual { order: -1; height: 200px; }
+}
